@@ -1,0 +1,14 @@
+{
+  "name": "tx-battle-royale-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "node-fetch": "^3.4.1",
+    "lowdb": "^5.0.4"
+  }
+}
