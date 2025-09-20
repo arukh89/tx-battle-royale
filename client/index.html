@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TX Battle Royale — Client</title>
+  <meta name="fc:frame" content="vNext" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="container">
+    <header>
+      <h1>TX Battle Royale ⚡</h1>
+      <div class="subtitle">Predict the number of transactions in the next Bitcoin block</div>
+    </header>
+
+    <main class="grid">
+      <section>
+        <div class="card">
+          <div id="status" class="status">Connecting...</div>
+
+          <div class="controls">
+            <button id="joinButton" class="cta">Join Battle</button>
+            <button id="shareBtn" class="cta">Share</button>
+          </div>
+
+          <div class="prediction">
+            <label>Your prediction</label>
+            <div class="row">
+              <input id="predictionInput" type="number" placeholder="e.g. 2500" />
+              <button id="submitPrediction" class="cta">Submit</button>
+            </div>
+          </div>
+
+          <div class="card smallcard">
+            <div class="small muted">Players (<span id="playersCount">0</span>)</div>
+            <ul id="playersList"></ul>
+          </div>
+        </div>
+
+        <div class="card chat">
+          <div class="small muted">Chat</div>
+          <div id="chatMessages" class="chatBox"></div>
+          <div class="row">
+            <input id="chatInput" placeholder="Say something..." />
+            <button id="sendMessage" class="cta">Send</button>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card leaderboard">
+          <h2>Leaderboard</h2>
+          <ul id="leaderboardList"></ul>
+          <div class="small muted">Signed in as <span id="userName">Not signed</span></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="small muted">Client + server demo. See README for setup and Farcaster integration notes.</div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
